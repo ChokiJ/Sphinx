@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="xyz.choki.sphinx.MainActivity">
+    <item
+        android:id="@+id/button_settings"
+        android:orderInCategory="100"
+        android:title="调试"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sphinx</string>
+    <string name="action_settings">Settings</string>
+    <string name="stringWelcome">Welcome, @Player!</string>
+    <string name="stringNow">正在进行</string>
+    <string name="stringTitle">斯芬克斯的谜题</string>
+</resources>
