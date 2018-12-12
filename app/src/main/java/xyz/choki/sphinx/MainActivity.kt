@@ -10,6 +10,7 @@ import android.widget.*
 
 import kotlinx.android.synthetic.main.activity_main.*
 import xyz.choki.sphinx.R.menu.menu_main
+import java.util.jar.Manifest
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         when (item.itemId) {
-            R.id.button_settings ->startActivity(Intent(this, activity_hidden_place::class.java))
+            R.id.button_settings -> startActivity(Intent(this, activity_hidden_place::class.java))
             else -> return false
         }
         return true
