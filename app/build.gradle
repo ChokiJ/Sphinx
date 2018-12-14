@@ -10,8 +10,8 @@ android {
         applicationId "xyz.choki.sphinx"
         minSdkVersion 23
         targetSdkVersion 27
-        versionCode 2
-        versionName "demo2.1"
+        versionCode 3
+        versionName "demo3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
