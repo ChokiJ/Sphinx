@@ -1,0 +1,20 @@
+{
+    "version": 1,
+    "info": {
+        "id": 0,
+        "type": 1,
+        "class": "斯芬克斯的测试谜题",
+        "titile": "第一个测试",
+        "description": "这是一条斯芬克斯的测试谜题\n是用来测试用的\n答案是0",
+        "hint": "答案是0 也就是坐标也是0"
+    },
+    "relation": {
+        "previous": 0,
+        "next": 1,
+        "branch": 1
+    },
+    "solution": {
+        "longitude": 0.000001,
+        "latitude": 0.000001
+    }
+}
