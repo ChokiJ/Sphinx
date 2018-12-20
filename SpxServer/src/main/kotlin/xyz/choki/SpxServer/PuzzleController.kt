@@ -16,13 +16,32 @@ import java.util.logging.Logger
 @RestController
 public class PuzzleController {
     val logger = LoggerFactory.getLogger(PuzzleController::class.java)
+    //获取谜题资料
     @GetMapping("/puzzles")
-    fun getPuzzles(id : Int) : String
+    fun getPuzzles(id : Int,get : String) : String
     {
         logger.info("谜题$id 资料获取")
         val resource = FileSystemResource("./puzzles/puzzle$id.json")
         val br = BufferedReader(InputStreamReader(resource.getInputStream()))
-        return br.readText()
+        val gson = Gson()
+        val pzl = gson.fromJson(br.readText(), Puzzle::class.javaObjectType)
+        var rtn : String
+        //根据参数返回相应值
+        when (get)
+        {
+            "id" -> rtn = pzl.info.id.toString()
+            "type" -> rtn = pzl.info.type.toString()
+            "class" -> rtn = pzl.info.`class`
+            "titile" -> rtn = pzl.info.titile
+            "description" -> rtn = pzl.info.description
+            "story" -> rtn = pzl.info.description
+            "hint" -> rtn = pzl.info.hint
+            "previous" -> rtn = pzl.relation.previous.toString()
+            "next" -> rtn = pzl.relation.next.toString()
+            "branch" -> rtn = pzl.relation.branch.toString()
+            else -> rtn = "error"
+        }
+        return rtn
     }
     //解决谜题
     @GetMapping("/solve")

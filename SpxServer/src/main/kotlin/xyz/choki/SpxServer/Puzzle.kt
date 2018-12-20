@@ -24,5 +24,6 @@ data class Info(
     val hint: String,
     val id: Int,
     val titile: String,
-    val type: Int
+    val type: Int,
+    val story: String
 )
