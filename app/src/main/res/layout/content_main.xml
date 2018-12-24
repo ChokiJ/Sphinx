@@ -11,7 +11,7 @@
     <TextView
         android:id="@+id/textWelcome"
         android:layout_width="336dp"
-        android:layout_height="47dp"
+        android:layout_height="31dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="欢迎回来，@Player！"
@@ -24,11 +24,11 @@
     <TextView
         android:id="@+id/textNow"
         android:layout_width="63dp"
-        android:layout_height="26dp"
+        android:layout_height="19dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
         android:text="正在进行"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,54 +45,54 @@
         android:textColor="@android:color/black"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textNow" />
 
     <TextView
         android:id="@+id/textDescription"
-        android:layout_width="231dp"
-        android:layout_height="103dp"
+        android:layout_width="335dp"
+        android:layout_height="287dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="谜题描述\nDescription"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
         android:textColor="@android:color/black"
-        android:textSize="18sp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/textTitle"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/buttonStart"
         android:layout_width="174dp"
-        android:layout_height="73dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
         android:text="开始"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDescription" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonHint"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/buttonHint"
         android:layout_width="174dp"
         android:layout_height="71dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="4dp"
         android:text="提示"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonStart"
-        app:layout_constraintVertical_bias="0.189" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textProgress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="当前进度 1/10 剩余提示次数 3"
