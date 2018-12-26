@@ -34,7 +34,7 @@ public class PuzzleController {
             "class" -> rtn = pzl.info.`class`
             "titile" -> rtn = pzl.info.titile
             "description" -> rtn = pzl.info.description
-            "story" -> rtn = pzl.info.description
+            "story" -> rtn = pzl.info.story
             "hint" -> rtn = pzl.info.hint
             "previous" -> rtn = pzl.relation.previous.toString()
             "next" -> rtn = pzl.relation.next.toString()
@@ -53,9 +53,9 @@ public class PuzzleController {
         val gson = Gson()
         val pzl = gson.fromJson(br.readText(), Puzzle::class.javaObjectType)
         //判断经纬度是否在一范围内
-        if ((pzl.solution.longitude - 0.00003 <= longitude) && (longitude <= pzl.solution.longitude + 0.00003))
+        if ((pzl.solution.longitude - 0.0003 <= longitude) && (longitude <= pzl.solution.longitude + 0.0003))
         {
-            if ((pzl.solution.latitude - 0.00003 <= latitude) && (latitude <= pzl.solution.latitude + 0.00003))
+            if ((pzl.solution.latitude - 0.0003 <= latitude) && (latitude <= pzl.solution.latitude + 0.0003))
             {
                 logger.info("谜题$id 解决成功")
                 return true
